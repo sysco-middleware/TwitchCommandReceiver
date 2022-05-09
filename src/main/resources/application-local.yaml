@@ -1,0 +1,15 @@
+environment: local
+
+server:
+  port: 8080
+management:
+  server.port: 8081
+
+logging:
+  config: classpath:log4j2-local.xml
+
+users:
+  api:
+    url:
+      v1: "http://localhost:${server.port}/api/v1/users"
+      v2: "http://localhost:${server.port}/api/v2/users"
