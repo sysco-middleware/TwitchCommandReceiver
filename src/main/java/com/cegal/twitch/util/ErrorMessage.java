@@ -1,4 +1,4 @@
-package no.sysco.cip.util;
+package com.cegal.twitch.util;
 
 import lombok.Getter;
 

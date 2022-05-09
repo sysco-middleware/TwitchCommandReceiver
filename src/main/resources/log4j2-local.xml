@@ -9,7 +9,7 @@
 
     <Loggers>
 
-        <Logger name="no.sysco.cip.RoutingApplication" level="debug" additivity="false">
+        <Logger name="com.cegal.twitch.RoutingApplication" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
 

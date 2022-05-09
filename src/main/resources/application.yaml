@@ -31,8 +31,9 @@ management:
 azure:
   service:
     bus:
+      connection: Endpoint=sb://twitchmessages.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=E/4f207CQvnAIQMoeHrfoqXLYg/QbcedYGOHVOKzSgw=
       subscription: twitchmessages.servicebus.windows.net
-      topic: test1
+      queue: test-1
 
 
 message: "Hello from ${environment} environment and the current time is"

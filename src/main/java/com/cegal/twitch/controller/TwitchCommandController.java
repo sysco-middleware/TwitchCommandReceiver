@@ -1,19 +1,11 @@
-package no.sysco.cip.controller;
+package com.cegal.twitch.controller;
 
-import no.sysco.cip.model.User;
-import no.sysco.cip.service.TwitchDispatch;
-import no.sysco.cip.service.UserService;
-import no.sysco.cip.util.ErrorMessage;
+import com.cegal.twitch.service.TwitchDispatch;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 public class TwitchCommandController {
@@ -22,12 +14,12 @@ public class TwitchCommandController {
   private TwitchDispatch twitchDispatch;
 
 
-  @RequestMapping (
-          value = "/changeScene",
+  /*@RequestMapping (
           method = RequestMethod.POST,
           produces = MediaType.APPLICATION_JSON_VALUE, //XML by default
-          path = "{sceneName}"
-  )
+          path = "/changeScene/{sceneName}"
+  )*/
+  @PostMapping("/changeScene/{sceneName}")
   public ResponseEntity<Integer> changeScene(@PathVariable("sceneName") String sceneName) {
     final int result = twitchDispatch.sceneChange(sceneName);
     return getIntegerResponseEntity(result);

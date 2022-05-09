@@ -74,10 +74,11 @@
 			<groupId>com.microsoft.azure</groupId>
 			<artifactId>azure-spring-boot-starter</artifactId>
 		</dependency>
+
 		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-spring-boot-starter</artifactId>
-			<version>3.5.0</version>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-messaging-servicebus</artifactId>
+			<version>7.7.0</version>
 		</dependency>
 
 		<dependency>
@@ -86,11 +87,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<!--<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-datadog</artifactId>
-			<scope>runtime</scope>
-		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
@@ -118,24 +114,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-spring-boot-starter</artifactId>
-			<version>${rest.easy.version}</version>
-			<scope>runtime</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-client</artifactId>
-			<version>${rest.easy.client.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-			<version>${apache.cxf.version}</version>
-		</dependency>
 		<!--<dependency>
 			<groupId>com.google.collections</groupId>
 			<artifactId>google-collections</artifactId>
